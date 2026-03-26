@@ -14,7 +14,7 @@ In this lab, you learned about the basic building block of sequential circuits: 
 ## Names
 Daniel Colwell & Gavin Lester
 ## Summary
-
+We started the lab as usual , listening to the instructions at the front of the room. We then opened the project in verilog, importing all of the right things, such as the Basys 3 board. We then made  D latch script, and following the given notes, we wrote in the always loop in the D latch script, and fixed a few errors along the way.
 ## Lab Questions
 
 ###  Why can we not just use structural Verilog to implement latches?
