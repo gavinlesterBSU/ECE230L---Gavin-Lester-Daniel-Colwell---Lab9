@@ -26,3 +26,29 @@ if the input signal in the block ever changes. This makes sure the blocks update
 ### What importance is memory to digital circuits?
 Since memory allows digital circuits to store and remember information, it allows them to carry out much more meaningful
 and complicated processes. They become capable of holding states, and can carry out actions past purely combinational logic.
+
+
+
+
+
+
+
+module byte_memory(
+    input [7:0] data,
+    input store,
+    output [7:0] memory
+);
+
+    genvar i;
+    generate
+        for (i = 0; i < 8; i = i + 1) begin : latch_array
+            d_latch d(
+                .D(data[i]),
+                .E(store),      // SAME enable for all
+                .Q(memory[i]),
+                .NotQ()
+            );
+        end
+    endgenerate
+
+endmodule
